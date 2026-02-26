@@ -6,7 +6,7 @@ export interface Env {
 
 // ⚠️ REPLACE THIS WITH YOUR EXACT GROUP CHAT ID
 // It usually starts with a minus sign, e.g., -100123456789
-const GROUP_CHAT_ID = "-5215402920"; 
+const GROUP_CHAT_ID = "-num"; 
 
 // Helper function to prevent weird characters in names from breaking the HTML format
 function escapeHTML(str: string) {
@@ -28,7 +28,7 @@ export default {
         title: `Create Event: ${query}`,
         description: "Tap to post this event to the group",
         input_message_content: {
-          message_text: `✅ <b>Event created by <a href="tg://user?id=${ctx.from.id}">${escapeHTML(ctx.from.first_name)}</a></b>`,
+          message_text: `<b>ساخته شده توسط <a href="tg://user?id=${ctx.from.id}">${escapeHTML(ctx.from.first_name)}</a></b>`,
           parse_mode: "HTML"
         }
       }]);
